@@ -1,0 +1,15 @@
+TRUNCATE TABLE messages;
+TRUNCATE TABLE employes;
+TRUNCATE TABLE assocommandesplats;
+TRUNCATE TABLE commandes;
+TRUNCATE TABLE reservations;
+TRUNCATE TABLE plats;
+TRUNCATE TABLE cartes;
+TRUNCATE TABLE clients;
+TRUNCATE TABLE restaurants;
+TRUNCATE TABLE tables;
+TRUNCATE TABLE superadmins;
+TRUNCATE TABLE adresses;
+
+
+A COMPLETER 
