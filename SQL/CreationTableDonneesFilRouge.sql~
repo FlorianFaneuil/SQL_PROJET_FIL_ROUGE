@@ -10,9 +10,7 @@ complement VARCHAR(10),
 
 type_voie VARCHAR(20) NOT NULL,
 
-nom VARCHAR(40) NOT NULL,
-
-code_postal VARCHAR(10) NOT NULL, 
+nom VARCHAR(40) NOT NULL, 
 
 ville VARCHAR(50) NOT NULL,
 
