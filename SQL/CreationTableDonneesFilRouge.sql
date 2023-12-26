@@ -65,6 +65,8 @@ image_restaurant_url VARCHAR(255),
 
 FOREIGN KEY (id_adresse) REFERENCES adresses(id)
 
+FOREIGN KEY (id_table) REFERENCES tables(id)
+
 );
  
 CREATE TABLE clients (
