@@ -1,24 +1,5 @@
 DROP TABLE IF EXISTS messages ,employes, assocommandesplats,commandes, reservations , plats, cartes, clients, restaurants,  tables, superadmins, adresses;
  
-CREATE TABLE adresses (
-
-id INT PRIMARY KEY IDENTITY,
-
-numéro INT NOT NULL,
-
-complement VARCHAR(10),
-
-type_voie VARCHAR(20) NOT NULL,
-
-nom VARCHAR(40) NOT NULL,
-
-code_postal VARCHAR(10) NOT NULL, 
-
-ville VARCHAR(50) NOT NULL,
-
-mention VARCHAR(100)
-
-);
  
 CREATE TABLE superadmins (
 
@@ -53,7 +34,7 @@ id INT PRIMARY KEY IDENTITY,
 
 nom VARCHAR(100) NOT NULL,
 
-id_adresse INT NOT NULL,
+adresse VARCHAR(150) NOT NULL,
 
 heure_ouverture TIME NOT NULL,
 
@@ -62,8 +43,6 @@ heure_fermeture TIME NOT NULL,
 id_table INT NOT NULL,
 
 image_restaurant_url VARCHAR(255),
-
-FOREIGN KEY (id_adresse) REFERENCES adresses(id),
 
 FOREIGN KEY (id_table) REFERENCES tables(id)
 
