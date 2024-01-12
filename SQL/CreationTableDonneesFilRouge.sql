@@ -40,7 +40,7 @@ numero INT NOT NULL,
 
 nombre_place INT NOT NULL,
 
-etat VARCHAR(10) DEFAULT 'LIBRE' NOT NULL,
+etat VARCHAR(10) DEFAULT 'LIBRE' NOT NULL CHECK (etat IN ('LIBRE', 'PRESENT', 'RESERVEE')),
 
 id_restaurant INT,
 
