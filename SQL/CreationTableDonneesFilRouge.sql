@@ -107,7 +107,7 @@ id_restaurant INT NOT NULL,
 
 id_client INT,
 
-id_table INT NOT NULL,
+id_table INT,
 
 date DATE NOT NULL,
 
