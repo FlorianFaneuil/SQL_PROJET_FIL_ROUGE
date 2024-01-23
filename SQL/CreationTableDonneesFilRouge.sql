@@ -40,7 +40,7 @@ numero INT NOT NULL,
 
 nombre_place INT NOT NULL,
 
-etat VARCHAR(10) DEFAULT 'LIBRE' NOT NULL,
+etat VARCHAR(10) DEFAULT 'LIBRE' NOT NULL CHECK (etat IN ('LIBRE', 'PRESENT', 'RESERVEE')),
 
 id_restaurant INT,
 
@@ -105,7 +105,7 @@ id INT PRIMARY KEY IDENTITY ,
 
 id_restaurant INT NOT NULL,
 
-id_client INT NOT NULL,
+id_client INT,
 
 id_table INT NOT NULL,
 
@@ -117,7 +117,7 @@ etat VARCHAR(20) DEFAULT 'EN ATTENTE' NOT NULL  CHECK (etat IN ('EN ATTENTE', 'A
 
 FOREIGN KEY (id_restaurant) REFERENCES restaurants(id),
 
-FOREIGN KEY (id_client) REFERENCES clients(id),
+FOREIGN KEY (id_client) REFERENCES clients(id) ON DELETE SET NULL,
 
 FOREIGN KEY (id_table) REFERENCES tables(id)
 
@@ -181,11 +181,11 @@ titre VARCHAR(20),
 
 contenu VARCHAR(255) NOT NULL,
 
-id_client INT NOT NULL,
+id_client INT,
 
 id_employe INT NOT NULL,
 
-FOREIGN KEY (id_client) REFERENCES clients(id),
+FOREIGN KEY (id_client) REFERENCES clients(id) ON DELETE SET NULL,
 
 FOREIGN KEY (id_employe) REFERENCES employes(id),
 
