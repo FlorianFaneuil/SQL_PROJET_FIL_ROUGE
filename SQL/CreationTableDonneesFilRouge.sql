@@ -91,7 +91,7 @@ description VARCHAR(255) NOT NULL,
 categorie VARCHAR(20) NOT NULL DEFAULT 'PLAT' CHECK (categorie IN ('ENTREE', 'PLAT', 'DESSERT', 'BOISSON')),
 
 image_plat_url VARCHAR(255),
-5()
+
 id_carte INT,
 
 FOREIGN KEY (id_carte) REFERENCES cartes(id)

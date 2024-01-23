@@ -28,26 +28,26 @@ SELECT * FROM restaurants;
 
 INSERT INTO tables (numero, nombre_place, etat, id_restaurant)
 VALUES 
- (1, 2, 'PRESENT', (SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (2, 4, 'PRESENT',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (3, 4, 'PRESENT',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (4, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (5, 6, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (6, 8, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (7, 2, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (8, 3, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (9, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (10, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (11, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Rest1')),
- (12, 8, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest2')),
- (13, 2, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Rest2')),
- (14, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest2')),
- (15, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest2')),
- (16, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Rest2')),
- (17, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Rest2')),
- (18, 8, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest2')),
- (19, 2, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Rest2')),
- (20, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Rest2'));
+ (1, 2, 'PRESENT', (SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (2, 4, 'PRESENT',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (3, 4, 'PRESENT',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (4, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (5, 6, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (6, 8, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (7, 2, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (8, 3, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (9, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (10, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (11, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ (12, 8, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ (13, 2, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ (14, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ (15, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ (16, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ (17, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ (18, 8, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ (19, 2, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ (20, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Au bon vivant'));
 
  SELECT * FROM tables;
 
@@ -65,8 +65,8 @@ VALUES
 
  INSERT INTO cartes (nom, id_restaurant)
 VALUES 
- ('Carte1', (SELECT id FROM restaurants WHERE nom = 'Rest1')),
- ('Carte2', (SELECT id FROM restaurants WHERE nom = 'Rest2'));
+ ('Carte1', (SELECT id FROM restaurants WHERE nom = 'La bonne table')),
+ ('Carte2', (SELECT id FROM restaurants WHERE nom = 'Au bon vivant'));
 
  SELECT * FROM cartes;
 
@@ -85,9 +85,9 @@ VALUES
 
  INSERT INTO reservations (id_restaurant, id_client, id_table, date, heure, etat)
 VALUES
-((SELECT id FROM restaurants WHERE nom = 'Rest1'), (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM tables WHERE numero = 1), '2024-01-10', '11:30','EN ATTENTE'),
-((SELECT id FROM restaurants WHERE nom = 'Rest1'), (SELECT id FROM clients WHERE nom = 'Jeanne'), (SELECT id FROM tables WHERE numero = 2), '2024-01-09', '11:30','REFUSEE'),
-((SELECT id FROM restaurants WHERE nom = 'Rest2'), (SELECT id FROM clients WHERE nom = 'Pierre'), (SELECT id FROM tables WHERE numero = 17), '2024-01-08', '11:30','ACCEPTEE');
+((SELECT id FROM restaurants WHERE nom = 'La bonne table'), (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM tables WHERE numero = 1), '2024-01-10', '11:30','EN ATTENTE'),
+((SELECT id FROM restaurants WHERE nom = 'La bonne table'), (SELECT id FROM clients WHERE nom = 'Jeanne'), (SELECT id FROM tables WHERE numero = 2), '2024-01-09', '11:30','REFUSEE'),
+((SELECT id FROM restaurants WHERE nom = 'Au bon vivant'), (SELECT id FROM clients WHERE nom = 'Pierre'), (SELECT id FROM tables WHERE numero = 17), '2024-01-08', '11:30','ACCEPTEE');
 
 SELECT * FROM reservations;
 
@@ -114,8 +114,8 @@ SELECT * FROM assocommandesplats;
 
 INSERT INTO employes (id_restaurant, nom, prenom, email, password)
 VALUES
-((SELECT id FROM restaurants WHERE nom = 'Rest1'), 'Dupont', 'Sacha', 'sacha.dupont@example.com', 'password'),
-((SELECT id FROM restaurants WHERE nom = 'Rest2'), 'Dutunnel', 'Poire', 'poire.dutunnel@example.com', 'password');
+((SELECT id FROM restaurants WHERE nom = 'La bonne table'), 'Dupont', 'Sacha', 'sacha.dupont@example.com', 'password'),
+((SELECT id FROM restaurants WHERE nom = 'Au bon vivant'), 'Dutunnel', 'Poire', 'poire.dutunnel@example.com', 'password');
 
 SELECT * FROM employes;
 
