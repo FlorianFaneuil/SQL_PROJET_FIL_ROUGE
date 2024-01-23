@@ -19,8 +19,8 @@ SELECT * FROM superadmins;
 
 INSERT INTO restaurants (nom, adresse, heure_ouverture, heure_fermeture, image_restaurant_url)
 VALUES 
-('La bonne table','6 Rue du Chat, 75000 Paris','11:00','23:00', 'https://www.valdoise-tourisme.com/wp-content/uploads/2023/04/cambrousse-restaurant-8-e1681483983431-1600x900.jpg'),
-('Au bon vivant','8 Rue du Chat, 75000 Paris','10:00','22:00', 'https://nolinskiparis.com/wp-content/uploads/2022/06/restaurant-nolinski-paris-5-etoiles-luxe-1-guillaume-de-laubier.jpg'),
+('La bonne table','6 Rue du Château, 75000 Paris','11:00','23:00', 'https://www.valdoise-tourisme.com/wp-content/uploads/2023/04/cambrousse-restaurant-8-e1681483983431-1600x900.jpg'),
+('Au bon vivant','10 Rue de Lille, 75000 Paris','10:00','22:00', 'https://nolinskiparis.com/wp-content/uploads/2022/06/restaurant-nolinski-paris-5-etoiles-luxe-1-guillaume-de-laubier.jpg'),
 ('Le chat hurlant','8 Rue du Chat, 75000 Paris','10:00','22:00', 'https://miloguide.com/wp-content/uploads/2022/04/Cafe%CC%81s-fe%CC%81lins-pour-lamour-des-chats-et-des-gens.jpeg');
 
 SELECT * FROM restaurants;
