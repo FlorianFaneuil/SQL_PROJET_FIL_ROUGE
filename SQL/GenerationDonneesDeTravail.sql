@@ -21,7 +21,8 @@ INSERT INTO restaurants (nom, adresse, heure_ouverture, heure_fermeture, image_r
 VALUES 
 ('La bonne table','6 Rue du Château, 75000 Paris','11:00','23:00', 'https://www.valdoise-tourisme.com/wp-content/uploads/2023/04/cambrousse-restaurant-8-e1681483983431-1600x900.jpg'),
 ('Au bon vivant','10 Rue de Lille, 75000 Paris','10:00','22:00', 'https://nolinskiparis.com/wp-content/uploads/2022/06/restaurant-nolinski-paris-5-etoiles-luxe-1-guillaume-de-laubier.jpg'),
-('Le chat hurlant','8 Rue du Chat, 75000 Paris','10:00','22:00', 'https://miloguide.com/wp-content/uploads/2022/04/Cafe%CC%81s-fe%CC%81lins-pour-lamour-des-chats-et-des-gens.jpeg');
+('Le chat hurlant','8 Rue du Chat, 75000 Paris','10:00','22:00', 'https://miloguide.com/wp-content/uploads/2022/04/Cafe%CC%81s-fe%CC%81lins-pour-lamour-des-chats-et-des-gens.jpeg'),
+('Test sans imageUrl','15 Rue sans URL, 75000 Paris','12:00','22:00', null);
 
 SELECT * FROM restaurants;
 
@@ -66,7 +67,9 @@ VALUES
  INSERT INTO cartes (nom, id_restaurant)
 VALUES 
  ('Carte1', (SELECT id FROM restaurants WHERE nom = 'La bonne table')),
- ('Carte2', (SELECT id FROM restaurants WHERE nom = 'Au bon vivant'));
+ ('Carte2', (SELECT id FROM restaurants WHERE nom = 'Au bon vivant')),
+ ('Carte3', (SELECT id FROM restaurants WHERE nom = 'Le chat hurlant')),
+ ('Carte4', (SELECT id FROM restaurants WHERE nom = 'Test sans imageUrl'));
 
  SELECT * FROM cartes;
 
@@ -79,7 +82,15 @@ VALUES
  ('Plat2', 15, 'Un très bon plat', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2')),
  ('Entree2', 8, 'Une très bonne entrée', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2')),
  ('Dessert2', 15, 'Un très bon dessert', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2')),
- ('Boisson2', 15, 'Une boisson fraiche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2'));
+ ('Boisson2', 15, 'Une boisson fraiche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2')),
+  ('Plat3', 15, 'Un très bon plat', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte3')),
+ ('Entree3', 8, 'Une très bonne entrée', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte3')),
+ ('Dessert3', 15, 'Un très bon dessert', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte3')),
+ ('Boisson3', 15, 'Une boisson fraiche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte3')),
+   ('Plat4', 15, 'Un très bon plat', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte4')),
+ ('Entree4', 8, 'Une très bonne entrée', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte4')),
+ ('Dessert4', 15, 'Un très bon dessert', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte4')),
+ ('Boisson4', 15, 'Une boisson fraiche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte4'));
 
  SELECT * FROM plats;
 
@@ -115,7 +126,10 @@ SELECT * FROM assocommandesplats;
 INSERT INTO employes (id_restaurant, nom, prenom, email, password)
 VALUES
 ((SELECT id FROM restaurants WHERE nom = 'La bonne table'), 'Dupont', 'Sacha', 'sacha.dupont@example.com', 'password'),
-((SELECT id FROM restaurants WHERE nom = 'Au bon vivant'), 'Dutunnel', 'Poire', 'poire.dutunnel@example.com', 'password');
+((SELECT id FROM restaurants WHERE nom = 'Au bon vivant'), 'Dutunnel', 'Poire', 'poire.dutunnel@example.com', 'password'),
+((SELECT id FROM restaurants WHERE nom = 'Le chat hurlant'), 'Duchemin', 'Antoine', 'antoine.duchemin@example.com', 'password'),
+((SELECT id FROM restaurants WHERE nom = 'Test sans imageUrl'), 'Dutest', 'Testeur', 'testeur.dutest@example.com', 'password');
+
 
 SELECT * FROM employes;
 
