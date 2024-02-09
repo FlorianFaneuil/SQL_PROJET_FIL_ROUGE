@@ -94,11 +94,11 @@ VALUES
 
  SELECT * FROM plats;
 
- INSERT INTO reservations (id_restaurant, id_client, id_table, date, heure, etat)
+ INSERT INTO reservations (id_restaurant, id_client, id_table, date, heure, etat, nombre_place)
 VALUES
-((SELECT id FROM restaurants WHERE nom = 'La bonne table'), (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM tables WHERE numero = 1), '2024-01-10', '11:30','EN ATTENTE'),
-((SELECT id FROM restaurants WHERE nom = 'La bonne table'), (SELECT id FROM clients WHERE nom = 'Jeanne'), (SELECT id FROM tables WHERE numero = 2), '2024-01-09', '11:30','REFUSEE'),
-((SELECT id FROM restaurants WHERE nom = 'Au bon vivant'), (SELECT id FROM clients WHERE nom = 'Pierre'), (SELECT id FROM tables WHERE numero = 17), '2024-01-08', '11:30','ACCEPTEE');
+((SELECT id FROM restaurants WHERE nom = 'La bonne table'), (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM tables WHERE numero = 1), '2024-01-10', '11:30','EN ATTENTE', 4),
+((SELECT id FROM restaurants WHERE nom = 'La bonne table'), (SELECT id FROM clients WHERE nom = 'Jeanne'), (SELECT id FROM tables WHERE numero = 2), '2024-01-09', '11:30','REFUSEE', 6),
+((SELECT id FROM restaurants WHERE nom = 'Au bon vivant'), (SELECT id FROM clients WHERE nom = 'Pierre'), (SELECT id FROM tables WHERE numero = 17), '2024-01-08', '11:30','ACCEPTEE', 2);
 
 SELECT * FROM reservations;
 

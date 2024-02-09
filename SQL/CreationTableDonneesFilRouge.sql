@@ -115,6 +115,8 @@ heure TIME NOT NULL,
 
 etat VARCHAR(20) DEFAULT 'EN ATTENTE' NOT NULL  CHECK (etat IN ('EN ATTENTE', 'ACCEPTEE', 'REFUSEE')),
 
+nombre_place INT,
+
 FOREIGN KEY (id_restaurant) REFERENCES restaurants(id),
 
 FOREIGN KEY (id_client) REFERENCES clients(id) ON DELETE SET NULL,
