@@ -83,22 +83,26 @@ VALUES
 
  INSERT INTO plats (nom, prix, description, categorie, image_plat_url, id_carte)
 VALUES 
- ('Plat1', 15, 'Un très bon plat', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
- ('Entree1', 8, 'Une très bonne entrée', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
- ('Dessert1', 15, 'Un très bon dessert', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
- ('Boisson1', 15, 'Une boisson fraiche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
- ('Plat2', 15, 'Un très bon plat', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2')),
- ('Entree2', 8, 'Une très bonne entrée', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2')),
- ('Dessert2', 15, 'Un très bon dessert', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2')),
- ('Boisson2', 15, 'Une boisson fraiche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte2')),
-  ('Plat3', 15, 'Un très bon plat', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte3')),
- ('Entree3', 8, 'Une très bonne entrée', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte3')),
- ('Dessert3', 15, 'Un très bon dessert', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte3')),
- ('Boisson3', 15, 'Une boisson fraiche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte3')),
-   ('Plat4', 15, 'Un très bon plat', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte4')),
- ('Entree4', 8, 'Une très bonne entrée', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte4')),
- ('Dessert4', 15, 'Un très bon dessert', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte4')),
- ('Boisson4', 15, 'Une boisson fraiche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte4'));
+ ('Accra de Morue', 8,'Beignet frits à base de morue, de farine de pois et d''épices, servis avec une sauce piquante', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Griot', 9, 'Morceaux de porc marinés dans un mélange d''ail, de jus d''orange et d''épices, puis frits', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Marinad', 5, 'Des concombres, des oignons et des carottes marinés dans un mélange de vinaigre, de jus de citron et d''épices haïtiennes, créant une salade fraîche et acidulée', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Tassot', 9, 'Morceaux de chèvre ou de bœuf marinés dans un mélange d''épices haïtiennes et frits, servis avec du riz et des haricots rouges', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Pâtés Haïtiens', 4, 'petits pâtés feuilletés farcis de viande hachée, de légumes et d''épices', 'ENTREE', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Riz et Pois Rouges', 12, 'Plat traditionnel composé de riz cuit dans un bouillon de haricots rouges assaisonné avec du thym, du persil et de l''ail. Servi avec du porc grillé ou du poulet', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Lambi Créole', 18, 'Tranches de conque de lambi (gros coquillage de mer) marinées dans une sauce créole épicée à base de tomates, d''oignons, de poivrons et d''épices haïtiennes. Servi avec du riz et des légumes', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Boulettes de Viande en Sauce', 15, 'Boulettes de viande hachée mélangées à des épices et des herbes, cuites dans une sauce tomate épicée avec des carottes et des pommes de terre. Servi avec du riz blanc', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Legim avec Viande', 14, 'Ragoût de légumes comprenant des carottes, des pois, des choux, des aubergines et du chou, mijoté avec du porc dans une sauce épicée. Servi avec du riz ou du pain', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Poulet Diri Ak Pwa', 16, 'Morceaux de poulet marinés dans une sauce épicée à base de tomates, d''ail, de piments et d''épices haïtiennes, cuits avec des haricots rouges et du riz pour créer un plat savoureux et nourrissant.', 'PLAT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Pain Patate', 5 , 'Délicieux gâteau sucré à base de patate douce, de farine, de lait de coco, de beurre, de cannelle et de muscade', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Konparet', 3 , 'Pain doux et moelleux, garni de confiture de goyave ou de banane, puis roulé et saupoudré de sucre en poudre', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Joumou Soup', 8 , 'Soupe crémeuse et sucrée à base de citrouille, de lait de coco, de porc, de muscade de clou de girofle. Servie en dessert pour son caractère sucré', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Douces Mamba', 6 , 'Bonbons traditionnels haïtiens faits à partir de beurre de cacahuète, de sucre de canne et de vanille, enrobés de noix de coco râpée ou de graines de sésame', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Akasan', 5 , 'Boisson traditionnelle crémeuse à base de farine de maïs, de lait, de cannelle de muscade et de sucre de canne. Consommée comme dessert pour sa texture épaisse et son goût sucré', 'DESSERT', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Jus de Citron Vert', 4 , 'Un rafraîchissant jus de citron vert frais pressé, sucré avec du sirop de sucre de canne et servi avec de la glace', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Rhum Punch', 8 , 'Cocktail tropical à base de rhum haïtien, de jus d''ananas, d''orange et de grenadine, de sirop de canne et agrémenté d''une touche de menthe fraîche', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Dous Kokoye', 5 , 'Boisson crémeuse et sucrée à base de lait de coco, de lait concentré sucré, de vanille et de cannelle, servie avec de la glace', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Jus de Canne à Sucre', 4 , 'Délicieux jus fraîchement pressé à partir de tiges de canne à sucre, servi avec une tranche de citron vert pour une touche d''acidité', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1')),
+ ('Té Poule', 6 , 'Boisson chaude réconfortante composée de lait, de rhum, de cannelle, de muscade, et sucrée avec du sirop de sucre de canne ou du miel', 'BOISSON', 'NULL', (SELECT id FROM cartes WHERE nom = 'Carte1'));
 
  SELECT * FROM plats;
 
@@ -123,10 +127,10 @@ SELECT * FROM commandes;
 
 INSERT INTO assocommandesplats (id_commande, id_plat)
 VALUES
-((SELECT id FROM commandes WHERE numero = 1), (SELECT id FROM plats WHERE nom = 'Plat2' )),
-((SELECT id FROM commandes WHERE numero = 2), (SELECT id FROM plats WHERE nom = 'Entree2')),
-((SELECT id FROM commandes WHERE numero = 3), (SELECT id FROM plats WHERE nom = 'Dessert2')),
-((SELECT id FROM commandes WHERE numero = 4), (SELECT id FROM plats WHERE nom = 'Boisson2'));
+((SELECT id FROM commandes WHERE numero = 1), (SELECT id FROM plats WHERE nom = 'Accra de Morue')),
+((SELECT id FROM commandes WHERE numero = 2), (SELECT id FROM plats WHERE nom = 'Griot')),
+((SELECT id FROM commandes WHERE numero = 3), (SELECT id FROM plats WHERE nom = 'Lambi Créole')),
+((SELECT id FROM commandes WHERE numero = 4), (SELECT id FROM plats WHERE nom = 'Té Poule'));
 
 SELECT * FROM assocommandesplats;
 
