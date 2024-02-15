@@ -127,10 +127,10 @@ SELECT * FROM commandes;
 
 INSERT INTO assocommandesplats (id_commande, id_plat)
 VALUES
-((SELECT id FROM commandes WHERE numero = 1), (SELECT id FROM plats WHERE nom = 'Accra de Morue')),
-((SELECT id FROM commandes WHERE numero = 2), (SELECT id FROM plats WHERE nom = 'Griot')),
-((SELECT id FROM commandes WHERE numero = 3), (SELECT id FROM plats WHERE nom = 'Lambi Créole')),
-((SELECT id FROM commandes WHERE numero = 4), (SELECT id FROM plats WHERE nom = 'Té Poule'));
+((SELECT id FROM commandes WHERE numero = 1), (SELECT id FROM plats WHERE nom = 'Accra de Morue' AND id_carte = (SELECT id FROM cartes WHERE nom = 'Carte1'))),
+((SELECT id FROM commandes WHERE numero = 2), (SELECT id FROM plats WHERE nom = 'Griot' AND id_carte = (SELECT id FROM cartes WHERE nom = 'Carte1'))),
+((SELECT id FROM commandes WHERE numero = 3), (SELECT id FROM plats WHERE nom = 'Lambi Créole' AND id_carte = (SELECT id FROM cartes WHERE nom = 'Carte1'))),
+((SELECT id FROM commandes WHERE numero = 4), (SELECT id FROM plats WHERE nom = 'Té Poule' AND id_carte = (SELECT id FROM cartes WHERE nom = 'Carte1')));
 
 SELECT * FROM assocommandesplats;
 
