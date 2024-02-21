@@ -11,7 +11,11 @@ prenom VARCHAR(20) NOT NULL,
 
 email VARCHAR(60) NOT NULL,
 
-password VARCHAR(60) NOT NULL
+password VARCHAR(60) NOT NULL,
+
+role VARCHAR(10) DEFAULT 'ADMIN',
+
+token VARCHAR(255)
 
 );
   
@@ -169,6 +173,10 @@ prenom VARCHAR(20) NOT NULL,
 email VARCHAR(60) NOT NULL,
 
 password VARCHAR(60) NOT NULL,
+
+role VARCHAR(10) DEFAULT 'EMPLO',
+
+token VARCHAR(255),
 
 FOREIGN KEY (id_restaurant) REFERENCES restaurants(id)
 
