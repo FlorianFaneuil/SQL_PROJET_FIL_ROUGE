@@ -178,7 +178,7 @@ role VARCHAR(10) DEFAULT 'EMPLO' NOT NULL CHECK (role IN ('EMPLO', 'ADMIN')),
 
 token VARCHAR(255),
 
-expirationTime DATETIME,
+expiration_time DATETIME,
 
 FOREIGN KEY (id_restaurant) REFERENCES restaurants(id)
 
