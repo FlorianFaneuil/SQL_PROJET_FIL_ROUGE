@@ -53,7 +53,7 @@ VALUES
  (14, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti')),
  (15, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti')),
  (16, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti')),
- (17, 6, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti')),
+ (17, 6, 'PRESENT',(SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti')),
  (18, 8, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti')),
  (19, 2, 'RESERVEE',(SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haitit')),
  (20, 4, 'LIBRE',(SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'));
