@@ -164,7 +164,7 @@ CREATE TABLE employes (
 
 id INT PRIMARY KEY IDENTITY,
 
-id_restaurant INT NOT NULL,
+id_restaurant INT,
 
 nom VARCHAR(50) NOT NULL,
 
@@ -174,7 +174,7 @@ email VARCHAR(60) NOT NULL,
 
 password VARCHAR(60) NOT NULL,
 
-role VARCHAR(10) DEFAULT 'EMPLO',
+role VARCHAR(10) DEFAULT 'EMPLO' NOT NULL CHECK (role IN ('EMPLO', 'ADMIN')),
 
 token VARCHAR(255),
 
