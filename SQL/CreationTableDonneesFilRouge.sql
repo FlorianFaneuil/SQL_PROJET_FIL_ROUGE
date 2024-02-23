@@ -178,6 +178,8 @@ role VARCHAR(10) DEFAULT 'EMPLO',
 
 token VARCHAR(255),
 
+expirationTime DATETIME,
+
 FOREIGN KEY (id_restaurant) REFERENCES restaurants(id)
 
 );
