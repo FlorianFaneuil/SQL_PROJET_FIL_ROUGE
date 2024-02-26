@@ -135,12 +135,14 @@ VALUES
 SELECT * FROM assocommandesplats;
 
 
-INSERT INTO employes (id_restaurant, nom, prenom, email, password)
+INSERT INTO employes (id_restaurant, nom, prenom, email, password, role)
 VALUES
-((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), 'Dupont', 'Sacha', 'sacha.dupont@example.com', 'password'),
-((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), 'Dutunnel', 'Poire', 'poire.dutunnel@example.com', 'password'),
-((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), 'Duchemin', 'Antoine', 'antoine.duchemin@example.com', 'password'),
-((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), 'Dutest', 'Testeur', 'testeur.dutest@example.com', 'password');
+((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), 'Dupont', 'Sacha', 'sacha.dupont@example.com', 'password', 'EMPLO'),
+((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), 'Dutunnel', 'Poire', 'poire.dutunnel@example.com', 'password', 'EMPLO'),
+((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), 'Duchemin', 'Antoine', 'antoine.duchemin@example.com', 'password', 'EMPLO'),
+((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), 'Dutest', 'Testeur', 'testeur.dutest@example.com', 'password', 'EMPLO'),
+(NULL, 'Admin', 'admin', 'admin@example.com','admin', 'ADMIN');
+
 
 
 SELECT * FROM employes;
