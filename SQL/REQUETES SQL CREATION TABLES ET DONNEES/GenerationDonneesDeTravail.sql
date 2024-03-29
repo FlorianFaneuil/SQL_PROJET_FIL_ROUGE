@@ -108,7 +108,7 @@ VALUES
 
  INSERT INTO reservations (id_restaurant, id_client, id_table, date, heure, etat, nombre_place)
 VALUES
-((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM tables WHERE numero = null), '2024-01-10', '11:30','EN ATTENTE', 4),
+((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM tables WHERE numero = null), '2024-01-10', '11:30','REFUSEE', 4),
 ((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Jeanne'), (SELECT id FROM tables WHERE numero = null), '2024-01-09', '11:30','REFUSEE', 6),
 ((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Pierre'), (SELECT id FROM tables WHERE numero = 13), '2024-01-08', '11:30','ACCEPTEE', 2),
 ((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Pierre'), (SELECT id FROM tables WHERE numero = null), '2024-03-27', '14:00','EN ATTENTE', 2),
