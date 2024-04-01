@@ -64,7 +64,7 @@ VALUES
 
  INSERT INTO clients (nom, prenom, email, password)
 VALUES 
- ('Jean', 'Paulo', 'jean.paulo@example.com', 'password'),
+ ('Marie-Sarah', 'Vergnaud', 'mara.vergnaud@example.com', 'password'),
  ('Jeanne', 'Paula', 'jeanne.paula@example.com', 'password'),
  ('Pierre', 'Dupont', 'pierre.dupont@example.com', 'password'),
  ('Yves', 'Rocher', 'yves.rocher@example.com', 'password');
@@ -108,8 +108,8 @@ VALUES
 
  INSERT INTO reservations (id_restaurant, id_client, id_table, date, heure, etat, nombre_place)
 VALUES
-((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM tables WHERE numero = null), '2024-01-10', '12:30','REFUSEE', 4),
-((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM tables WHERE numero = null), '2024-01-10', '14:00','ACCEPTEE', 4),
+((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Marie-Sarah'), (SELECT id FROM tables WHERE numero = null), '2024-01-10', '12:30','REFUSEE', 4),
+((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Marie-Sarah'), (SELECT id FROM tables WHERE numero = null), '2024-01-10', '14:00','ACCEPTEE', 4),
 ((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Jeanne'), (SELECT id FROM tables WHERE numero = null), '2024-01-09', '11:30','REFUSEE', 6),
 ((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Pierre'), (SELECT id FROM tables WHERE numero = 13), '2024-01-08', '11:30','ACCEPTEE', 2),
 ((SELECT id FROM restaurants WHERE nom = 'Saveurs d''Haiti'), (SELECT id FROM clients WHERE nom = 'Pierre'), (SELECT id FROM tables WHERE numero = null), '2024-03-27', '14:00','EN ATTENTE', 2),
@@ -154,7 +154,7 @@ SELECT * FROM employes;
 
 INSERT INTO messages (titre, contenu, id_client, id_employe)
 VALUES
-('Titre1', 'Voici le contenu de mon message 1', (SELECT id FROM clients WHERE nom = 'Jean'), (SELECT id FROM employes WHERE prenom = 'Sacha')),
+('Titre1', 'Voici le contenu de mon message 1', (SELECT id FROM clients WHERE nom = 'Marie-Sarah'), (SELECT id FROM employes WHERE prenom = 'Sacha')),
 ('Titre2', 'Voici le contenu de mon message 2', (SELECT id FROM clients WHERE nom = 'Jeanne'), (SELECT id FROM employes WHERE prenom = 'Poire'));
 
 SELECT * FROM messages;
